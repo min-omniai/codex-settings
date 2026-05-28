@@ -86,3 +86,95 @@ transcribe
 
 
 추가로 `.gitignore`가 잘 되어 있다면 README에는 민감 파일 주의 정도만 적어두면 됩니다. 이 README는 “미래의 나를 위한 설치 설명서” 역할이라고 생각하면 딱 맞습니다.
+
+## OS별 복사 대상
+
+이 저장소는 백업용입니다. Codex가 실제로 읽는 위치는 각 OS의 `.codex` 폴더입니다.
+
+### Windows
+
+Codex 설정 폴더:
+
+```powershell
+$env:USERPROFILE\.codex
+```
+
+예시:
+
+```text
+C:\Users\<UserName>\.codex
+```
+
+복사 대상:
+```text
+codex-settings\AGENTS.md
+→ C:\Users\<UserName>\.codex\AGENTS.md
+
+codex-settings\skill-install-list.txt
+→ C:\Users\<UserName>\.codex\skill-install-list.txt
+
+codex-settings\skills\
+→ C:\Users\<UserName>\.codex\skills\
+```
+
+복사 명령:
+```powershell
+Copy-Item .\AGENTS.md $env:USERPROFILE\.codex\AGENTS.md -Force
+Copy-Item .\skill-install-list.txt $env:USERPROFILE\.codex\skill-install-list.txt -Force
+
+# 커스텀 스킬이 있을 때만
+Copy-Item .\skills\* $env:USERPROFILE\.codex\skills\ -Recurse -Force
+```
+
+### macOS
+
+Codex 설정 폴더:
+
+```bash
+~/.codex
+```
+
+예시:
+
+```text
+/Users/<UserName>/.codex
+```
+
+복사 대상:
+
+```text
+codex-settings/AGENTS.md
+→ /Users/<UserName>/.codex/AGENTS.md
+
+codex-settings/skill-install-list.txt
+→ /Users/<UserName>/.codex/skill-install-list.txt
+
+codex-settings/skills/
+→ /Users/<UserName>/.codex/skills/
+```
+
+복사 명령:
+
+```bash
+mkdir -p ~/.codex/skills
+
+cp ./AGENTS.md ~/.codex/AGENTS.md
+cp ./skill-install-list.txt ~/.codex/skill-install-list.txt
+
+# 커스텀 스킬이 있을 때만
+cp -R ./skills/* ~/.codex/skills/
+```
+
+## 주의
+
+codex-settings 저장소 자체를 .codex 폴더로 사용하지 않습니다.
+
+```text
+codex-settings
+→ Git 백업 저장소
+
+~/.codex 또는 C:\Users\<UserName>\.codex
+→ Codex 실제 설정 폴더
+```
+
+그리고 참고로 방금 확인해보니 현재 README는 제목만 들어 있는 상태였습니다. 위 내용을 넣고 커밋하면 다음 PC 세팅할 때 꽤 편해질 거예요.
