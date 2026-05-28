@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Service Builder"
+  short_description: "Build and verify web services"
+  default_prompt: "Build a responsive web page or small web service, verify core flows, and prepare it for preview deployment."

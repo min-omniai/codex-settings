@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unity Client Review"
+  short_description: "Review Unity client code risks"
+  default_prompt: "Review this Unity C# code for lifecycle bugs, GC allocation, event cleanup, Addressables, UI performance, and mobile risks."

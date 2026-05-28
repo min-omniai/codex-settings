@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Lecture Builder"
+  short_description: "Create Unity game dev lessons"
+  default_prompt: "Create a Unity/C# game development lesson with explanation, practice, common mistakes, assignment, and answer guide."
