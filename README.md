@@ -177,4 +177,10 @@ codex-settings
 → Codex 실제 설정 폴더
 ```
 
-그리고 참고로 방금 확인해보니 현재 README는 제목만 들어 있는 상태였습니다. 위 내용을 넣고 커밋하면 다음 PC 세팅할 때 꽤 편해질 거예요.
+## Custom Skills
+
+Custom skills are stored in `skills/`.
+
+- `game-lecture-builder`: Unity/C# 강의안, 실습, 과제, 피드백 제작
+- `unity-client-review`: Unity 클라이언트 코드 리뷰와 성능/생명주기 점검
+- `web-service-builder`: 웹페이지/웹서비스 제작, 검증, 배포 준비그리고 참고로 방금 확인해보니 현재 README는 제목만 들어 있는 상태였습니다. 위 내용을 넣고 커밋하면 다음 PC 세팅할 때 꽤 편해질 거예요.
