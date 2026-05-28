@@ -1,4 +1,4 @@
-# codex-settings# codex-settings
+# codex-settings
 
 개인 Codex 설정 백업 저장소입니다.
 
