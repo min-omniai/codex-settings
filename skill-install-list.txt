@@ -4,3 +4,6 @@ screenshot
 security-best-practices
 pdf
 transcribe
+playwright
+playwright-interactive
+vercel-deploy
